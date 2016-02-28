@@ -1,0 +1,21 @@
+// Place all the styles related to the streams controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.form_stream {
+  display: inline-block;
+  color: #9E9E9E;
+}
+.label {
+    display: block;
+    text-align: left;
+    padding: 0 0 0 0;
+}
+.tfield {
+  background-color: #222222;
+  border-color: rgba(235, 235, 235, 0.05);
+  margin-right: 20px;
+}
+//-------------------------
+.hidden {
+  visibility: hidden;
+}

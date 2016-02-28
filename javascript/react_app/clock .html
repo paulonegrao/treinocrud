@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"></meta>
+
+        <script src="react.js"></script>
+        <script src="react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+        <title></title>
+    </head>
+    <body>
+<div id="container"></div>
+<script type="text/babel">
+var Shape = React.createClass({
+    var mainObj = this;
+  getInitialState: function(){
+    return {currentTime: this.changeClock()};
+  },
+  changeClock: function(){
+    setInterval(function(){ var nt = {currentTime: new Date()};
+                            mainObj.setState(nt);
+                            return nt;}, 1000);
+  },
+  render: function() {
+    var styles = {width: this.props.dimension,
+                  height: this.props.dimension,
+                  backgroundColor: this.state.color};
+    return <p style={styles} > ??{toString(mainObj.state.currentTime)}?? </p>;
+   }
+});
+ReactDOM.render(<Shape corvez={{red: "green", green: "red"}} dimension="200px"/>, document.getElementById('container'));
+</script>
+  </body>
+</html>

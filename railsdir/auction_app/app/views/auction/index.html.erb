@@ -1,0 +1,15 @@
+<h1>Fund.sy - Your Awesome Crowdfunding Solution</h1>
+<h2>Recent Auctions</h2>
+<% @auctions.each do |auction| %>
+ <%# using `cache` helper method. Rails will generate a fragement cache for this
+     template. If you pass it an ActiveRecord object (such as `auction`) it
+     will use `cache_key` method to generate the cache key %>
+  <% cache auction, expires_in: 1.days do %>
+    <div class="well">
+      <h3>
+        <%= link_to auction.title.upcase, auction %>
+        (<%= auction.bids.size %> bids)
+      </h3>
+    </div>
+  <% end %>
+<% end %>

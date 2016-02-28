@@ -1,0 +1,7 @@
+<% if Time.now.utc - @event.updated_at > 3 %>
+    $('#off-air-img').removeClass('hidden');
+    $('#on-air-img').addClass('hidden');
+<% else %>
+    $('#off-air-img').addClass('hidden');
+    $('#on-air-img').removeClass('hidden');
+<% end %>

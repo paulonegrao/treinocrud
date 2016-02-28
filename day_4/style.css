@@ -1,0 +1,36 @@
+
+body {
+  background: url()
+}
+h3 {
+  color: brown;
+}
+
+p {
+  text-decoration: underline;
+}
+
+img {
+  width: 100px;
+}
+
+#lists {
+  color: purple;
+}
+.specil-list {
+  text-decoration: underline;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.box p {
+  color: blue;
+}
+.box .hi {
+  color: cyan;
+}
+p.hi {
+  text-decoration: line-through;
+}

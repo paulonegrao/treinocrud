@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"></meta>
+
+        <script src="react.js"></script>
+        <script src="react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+        <title></title>
+    </head>
+    <body>
+<div id="container"></div>
+<script type="text/babel">
+var Shape = React.createClass({
+  getInitialState: function(){
+    return {color: "red"};
+  },
+  changeColor: function(){
+    var newState = {color: this.props.corvez[this.state.color]};
+    this.setState(newState);
+  },
+  render: function() {
+    var styles = {width: this.props.dimension,
+                  height: this.props.dimension,
+                  backgroundColor: this.state.color};
+    return <div style={styles} onClick={this.changeColor}></div>;
+  }
+});
+ReactDOM.render(<Shape corvez={{red: "green", green: "red"}} dimension="200px"/>, document.getElementById('container'));
+</script>
+  </body>
+</html>

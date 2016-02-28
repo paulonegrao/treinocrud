@@ -1,0 +1,15 @@
+#div1 {
+  position: fixed;
+  top: 100px;
+  left: 50px;
+  background-color: orange;
+  width: 600px;
+  height: 600px;
+}
+#img1 {
+  position: absolute;
+  width: 200px;
+  height 200px;
+  top: 200px;
+  left: 200px;
+}

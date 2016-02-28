@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script>
+    $(document).ready(function(){
+      var members = $('.team-member');
+      var teams = members.length + 1;
+      while (members.length < teams) {
+        teams = prompt("Number of teams? (it must be <= " + members.length + ")");
+        if (!teams) {return};
+      }
+      var result = [];
+      while (members.length > 0){
+        for (var t = 0; t < teams && members.length > 0; t++){
+          if (result["team-"+t] == undefined) {
+            result["team-"+t] = []
+          }
+          var rand = Math.floor((Math.random() * members.length));
+          result["team-"+t].push(members.eq(rand).html());
+          members.splice(rand, 1);
+        }
+      }
+      console.log(result);
+    });
+    </script>
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <div>
+      <ul>
+        <li class="team-member">Tony</li>
+        <li class="team-member">Paulo</li>
+        <li class="team-member">Jeff</li>
+        <li class="team-member">Daniel</li>
+        <li class="team-member">Alex</li>
+        <li class="team-member">Isaac</li>
+        <li class="team-member">Koroush</li>
+        <li class="team-member">Sandra</li>
+        <li class="team-member">Tam</li>
+        <li class="team-member">Luc</li>
+      </ul>
+
+
+  </body>
+</html>

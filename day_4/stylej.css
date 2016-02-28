@@ -1,0 +1,21 @@
+
+div.main {
+  width: auto;
+  height: 600px;
+  background: url("Images/journey.jpg");
+  text-align: center;
+
+}
+div.cab {
+  width: auto;
+  height: 100px;
+  color: white;
+  background-color: rgba(55, 0, 0, 0.5);
+  font-family: fantasy;
+
+}
+div.body {
+  width: auto;
+  height: 520px;
+
+}
